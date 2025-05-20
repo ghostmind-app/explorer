@@ -1,0 +1,41 @@
+{
+  "id": "nAGUWeDQqz0Q",
+  "name": "client",
+  "description": "client",
+  "custom": {
+    "root": "scripts"
+  },
+  "docker": {
+    "default": {
+      "root": "docker",
+      "image": "gcr.io/ghostmind-core/map-client",
+      "env_based": false,
+      "context_dir": "app"
+    }
+  },
+  "compose": {
+    "default": {
+      "root": "local"
+    }
+  },
+  "terraform": {
+    "core": {
+      "path": "infra",
+      "global": false,
+      "containers": [
+        "default"
+      ]
+    }
+  },
+  "tunnel": {
+    "default": {
+      "hostname": "map-client.ghostmind.app",
+      "service": "http://localhost:5001"
+    }
+  },
+  "routines": {
+    "dev": "run custom dev build up",
+    "activate": "run action local client -W --no-reuse",
+    "clean": "cd app && rm -rf .next && rm -rf node_modules"
+  }
+}

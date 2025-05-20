@@ -1,0 +1,23 @@
+declare namespace NodeJS {
+  export interface ProcessEnv {
+    API_ENDPOINT_SECRET: string;
+    NEXTAUTH_URL: string;
+    NEXTAUTH_SECRET: string;
+    GOOGLE_OAUTH_CLIENT_ID: string;
+    GOOGLE_OAUTH_CLIENT_SECRET: string;
+    DB_USERS_ENDPOINT: string;
+    DB_USERS_SECRET: string;
+    OPENAI_API_KEY: string;
+    LOCALHOST_SRC: string;
+    CRYPTO_SECRET_KEY: string;
+    NEXT_PUBLIC_NOTION_OAUTH_REDIRECT_URI: string;
+    NEXT_PUBLIC_NOTION_AUTHORIZATION_URL: string;
+    NEXT_PUBLIC_DB_POTION_ENDPOINT_WS: string;
+    NEXT_PUBLIC_DB_POTION_ENDPOINT_HTTP: string;
+    NEXT_PUBLIC_NOTION_OAUTH_CLIENT_ID: string;
+    NEXT_PUBLIC_NOTION_OAUTH_REDIRECT_URI: string;
+    NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN: string;
+    LIST_DB_ENDPOINT_HTTP: string;
+    LIST_DB_SECRET: string;
+  }
+}

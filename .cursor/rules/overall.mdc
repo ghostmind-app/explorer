@@ -1,0 +1,19 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Project Vision: Map Your City
+
+This project, **Map Your City**, aims to create an innovative platform that transforms how users explore and interact with the world. The core idea is to empower users to build a personalized mapping experience.
+
+## Guiding Principles:
+
+*   **Personalization**: Allow users to save personal checkpoints (landmarks or unique spots) with custom names.
+*   **Journey Creation**: Enable users to design and share routes by connecting checkpoints, facilitating tailored adventures.
+*   **Curated Collections**: Support grouping checkpoints into themed collections (e.g., "Best Coffee Shops") for easy discovery and sharing.
+*   **Community & Sharing**: Foster a community by allowing users to share checkpoints, routes, and collections, and discover content from others.
+*   **Discovery**: Help users uncover hidden gems and move beyond generic maps.
+*   **Ease of Use**: Ensure a user-friendly interface for effortless mapping and sharing.
+
+The overall goal is to redefine interaction with surroundings, making the world discoverable "one checkpoint at a time," as detailed in [Readme.md](mdc:Readme.md).

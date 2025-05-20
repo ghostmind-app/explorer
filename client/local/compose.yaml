@@ -1,0 +1,18 @@
+services:
+  map-client:
+    container_name: map-${APP}
+    build:
+      context: ${SRC}/${APP}/app
+      dockerfile: ${SRC}/${APP}/docker/Dockerfile
+      args:
+        LOCAL: 'true'
+    env_file:
+      - ${SRC}/${APP}/.env.local
+    ports:
+      - ${PORT}:${PORT}
+    environment:
+      APP: ${APP}
+      LOCALHOST_SRC: ${LOCALHOST_SRC}
+    volumes:
+      - ${LOCALHOST_SRC}/client/app:/usr/app/main
+    command: ['npm', 'run', 'dev']

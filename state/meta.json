@@ -1,0 +1,30 @@
+{
+  "id": "uvL3Gju8ynoN",
+  "name": "state",
+  "terraform": {
+    "core": {
+      "path": "run",
+      "global": false,
+      "containers": [
+        "default"
+      ]
+    }
+  },
+  "docker": {
+    "default": {
+      "root": "docker",
+      "image": "gcr.io/ghostmind-core/map-state",
+      "env_based": false
+    }
+  },
+  "compose": {
+    "default": {
+      "root": "local",
+      "filename": "compose.yaml"
+    }
+  },
+  "routines": {
+    "dev": "run custom dev --all",
+    "activate": "run action local state -W --no-reuse"
+  }
+}

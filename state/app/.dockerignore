@@ -1,0 +1,9 @@
+Dockerfile.dev
+Dockerfile.prod
+README.md
+data/*
+node_modules
+npm-debug.log
+yarn-error.log
+.next
+**/.next

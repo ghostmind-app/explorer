@@ -1,0 +1,50 @@
+/* Import Mapbox GL JS CSS - you might do this globally in your main index.css or App.css */
+@import 'mapbox-gl/dist/mapbox-gl.css';
+
+/* Styles for the numbered markers */
+.numbered-marker {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px; /* Vertically center the number */
+  display: flex; /* Use flexbox for centering */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Add pointer cursor */
+}
+
+/* Optional: Styles for Mapbox Popups if default isn't sufficient */
+.mapboxgl-popup {
+  max-width: 250px; /* Adjust as needed */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* Match Tailwind default */
+  z-index: 10; /* Ensure popups are above other elements if needed */
+}
+
+.mapboxgl-popup-content {
+  padding: 1rem; /* Tailwind's p-4 */
+  text-align: left;
+  border-radius: 0.5rem; /* Tailwind's rounded-lg */
+}
+
+.mapboxgl-popup-content h4 {
+  margin: 0 0 0.5rem 0; /* Tailwind's mb-2 */
+  color: hsl(var(--primary)); /* Use Shadcn primary color */
+  font-size: 1.125rem; /* Tailwind's text-lg */
+  font-weight: 600; /* Tailwind's font-semibold */
+}
+
+.mapboxgl-popup-content p {
+    margin-bottom: 0.25rem; /* Tailwind's mb-1 */
+    font-size: 0.875rem; /* Tailwind's text-sm */
+}
+.mapboxgl-popup-close-button {
+    /* Optional: Style close button if needed */
+    padding: 4px;
+    font-size: 1.5rem;
+}

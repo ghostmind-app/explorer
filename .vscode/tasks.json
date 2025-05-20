@@ -1,0 +1,84 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "client_run",
+            "type": "shell",
+            "command": "cd /workspaces/map/client && zsh",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "client",
+                "clear": true,
+            }
+        },
+        {
+            "label": "client_test",
+            "type": "shell",
+            "command": "cd /workspaces/map/client && zsh",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "client",
+                "clear": true,
+            }
+        },
+        {
+            "label": "state_run",
+            "type": "shell",
+            "command": "cd /workspaces/map/state && zsh",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "state",
+                "clear": true,
+            }
+        },
+        {
+            "label": "state_test",
+            "type": "shell",
+            "command": "cd /workspaces/map/state && zsh",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "state",
+                "clear": true,
+            }
+        },
+        {
+            "label": "home",
+            "type": "shell",
+            "command": "cd /workspaces/map && zsh",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "home",
+                "clear": true,
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Open All Terminals",
+            "type": "shell",
+            "dependsOn": [
+                "home",
+                "client_run",
+                "client_test",
+                "state_run",
+                "state_test"
+            ],
+            "presentation": {
+                "reveal": "never",
+                "group": "collective"
+            },
+            "runOptions": {
+                "reevaluateOnRerun": false
+            }
+        }
+    ]
+}

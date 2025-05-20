@@ -1,0 +1,16 @@
+services:
+  map_state:
+    container_name: map-${APP}
+    build:
+      context: ${SRC}/${APP}/app
+      dockerfile: ${SRC}/${APP}/docker/Dockerfile
+    restart: always
+    env_file:
+      - ${SRC}/${APP}/.env.local
+    environment:
+      HASURA_GRAPHQL_ENABLE_CONSOLE: 'false'
+      HASURA_GRAPHQL_SERVER_PORT: ${PORT}
+      HASURA_GRAPHQL_ENABLE_TELEMETRY: 'false'
+
+    ports:
+      - ${PORT}:${PORT}

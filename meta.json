@@ -1,0 +1,10 @@
+{
+    "id": "LgfybOM7vHdC",
+    "name": "map",
+    "type": "app",
+    "routines": {
+        "dev_client": "cd ${SRC}/client && run custom dev --all",
+        "dev_state": "cd ${SRC}/state && run custom dev build up",
+        "dev": "parallel dev_client dev_state"
+    }
+}
